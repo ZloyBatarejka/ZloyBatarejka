@@ -16,7 +16,7 @@ const LeagueChildren = ({ matches }) => {
                 <div className="match__name">{item.name}</div>
                 <div className="match__star"><img src={star} alt="star" /></div>
                 <div className="match__status">{item.status}</div>
-                <div className="match__more">Подробнее</div>
+                <div className="match__more"><a src={item.link} target="_blank">Подробнее</a></div>
             </div>
         )
     })
