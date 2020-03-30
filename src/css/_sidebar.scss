@@ -1,0 +1,43 @@
+.sidebar {
+    grid-area: sidebar;
+    margin-top: 18px;
+    margin-right: 12px;
+    margin-left: 10px;
+    color: white;
+    .myLeagues {
+        background-color: #353942;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        &__header {
+            padding: 14px;
+            border-bottom: 1px solid white;
+            font-weight: 600;
+        }
+        &__league {
+            padding: 5px 14px;
+            font-weight: 600;
+           
+        }
+        &__children{
+            cursor: default !important;
+            p {
+                padding: 2px 10px;
+                font-weight: 400;
+            }
+        }
+        &__controller {
+            cursor: pointer;
+            border: none;
+            color: white;
+            background: transparent;
+            margin-left: 10px;
+            transform: scale(1.5);
+            &:active{
+                outline: none;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}

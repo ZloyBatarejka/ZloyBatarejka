@@ -1,0 +1,13 @@
+$blue: #1E99C7;
+$black: #353942;
+$grey: rgba(53, 57, 66, 0.25);
+$main-text: $blue;
+$main-dark: $black;
+$breakPoint: 968px;
+$border: $grey;
+
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

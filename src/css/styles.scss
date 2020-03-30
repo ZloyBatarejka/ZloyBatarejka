@@ -1,0 +1,47 @@
+@import "./variables";
+@import "./header";
+@import "./main";
+@import "./sidebar";
+@import "./all";
+@import "./tables";
+@import "./loader";
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro";
+}
+body {
+  background: rgb(236, 236, 236);
+}
+.wrapper {
+  display: grid;
+  width: 100%;
+ 
+  grid-template-areas:
+  "header header"
+  "sidebar main";
+  grid-template-rows:  64px 1fr ;
+  grid-template-columns:  18% 1fr;
+}
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: $breakPoint){
+  .hidden {
+    transform: translateX(-100%);
+  
+  }
+    .wrapper{
+      grid-template-rows:  64px 1fr ;
+      grid-template-columns:  100%;
+    grid-template-areas:
+    "header"
+    "main";
+
+    }
+    .sidebar {
+      display: none;
+    }
+}

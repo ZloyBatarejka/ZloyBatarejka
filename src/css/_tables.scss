@@ -1,0 +1,74 @@
+@import "./variables";
+.table {
+    margin-top: 14px;
+    background: #fff;
+    border-radius: 5px;
+    width: 98%;
+    .league {
+        margin-bottom: 15px;
+        &__name {
+            padding: 10px 0 8px 18px;
+            border-bottom: 1px solid $border;
+
+        }
+        &__img {
+            width: 27px;
+            height: 16px;
+            object-fit: cover;
+            margin-right: 22px;
+        }
+    }
+    .match {
+        display: flex;
+        flex-direction: row;
+        padding: 9px 13px 9px 10px;
+        div{
+            padding: 5px;
+        }
+        &__time {
+            border-right: 1px solid $border;
+            padding-right: 8px;
+            color: rgba(53, 57, 66, 0.5);
+            @extend %center;
+        }
+        &__name {
+            padding-left: 7px;
+            font-weight: 600;
+            color: $main-text;
+        }
+        &__star{
+            margin-left: auto;
+            border-right: 1px solid $border;
+            padding-right: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__status {
+            width: 150px;
+            color:  rgba(45, 40, 94, 0.56);
+            padding-right: 45px !important;
+            border-right: 1px solid $border;
+        }
+        &__more {
+            color: $main-text;
+            padding-left: 16px !important;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: $breakPoint){
+    .table {
+        .match {
+            
+            &__status{
+                display: none;
+            }
+            &__more {
+                display: none;
+            }
+        }
+    }
+}
