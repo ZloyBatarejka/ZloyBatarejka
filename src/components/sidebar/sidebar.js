@@ -11,7 +11,7 @@ const Sidebar = () => {
         const getData = async () => {
             const leagueArray = [];
             const countriesArray = [];
-            await Axios.get("http://u0362146.plsk.regruhosting.ru/league").then(data => {
+            await Axios.get("//u0362146.plsk.regruhosting.ru/league").then(data => {
                 data.data.forEach(country => {
                     leagueArray.push(country)
                 })
@@ -19,7 +19,7 @@ const Sidebar = () => {
             leagueArray.forEach(league => {
                 league.opened = false;
             })
-            await Axios.get("http://u0362146.plsk.regruhosting.ru/country").then(data => {
+            await Axios.get("//u0362146.plsk.regruhosting.ru/country").then(data => {
                 data.data.forEach((item) => {
                     countriesArray.push(item)
                 })
