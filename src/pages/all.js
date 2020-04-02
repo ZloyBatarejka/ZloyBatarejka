@@ -42,7 +42,11 @@ function All() {
     return (
         <>
             {state.loaded
-                ? (<Loading />)
+                ? (<>
+                    <Loading />
+                    <p>Firebase использует https протокол.Кастомная API на http протоколе. API на https протоколе только по платной подписке. Однако, все корректно работает с локального сервера.</p>
+                </>
+                )
                 : (
                     <Context.Provider value={leagues}>
                         <div className="all">

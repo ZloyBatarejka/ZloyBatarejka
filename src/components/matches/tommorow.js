@@ -2,20 +2,19 @@ import React, { useContext } from 'react';
 import LeagueComponent from "../leagueComponent";
 import { Context } from "../../context";
 
-const Tommorow = () => {
+const Today = () => {
     const state = useContext(Context);
     state.forEach(item => {
         item.childToRender = [];
     })
     const leagues = new Set();
     state.forEach(league => {
-        const t = new Date();
-        t.setDate(t.getDate() + 1)
-        const today = ('0' + t.getDate()).slice(-2);
+        const date = new Date();
+        const tommorow = ('0' + new Date(date.setDate(date.getDate() + 1)).getDate()).slice(-2);
         if (league.child.length) {
             league.child.forEach((match) => {
                 const day = (match.time).slice(8, 10);
-                if (day === today) {
+                if (day === tommorow) {
                     league.childToRender.push(match);
                     leagues.add(league)
                 }
@@ -32,11 +31,5 @@ const Tommorow = () => {
     );
 }
 
-export default Tommorow;
-
-
-
-
-
-
+export default Today;
 
